@@ -12,7 +12,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 @RunWith(SpringRunner.class)
-@WebMvcTest(HomeController.class)
 public class HomeControllerTest {
 
     private final MockMvc mockMvc;

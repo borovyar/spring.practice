@@ -59,6 +59,11 @@
         <br/>
         <button>Submit your taco</button>
     </div>
+    <label for="ccNumber">Creadit Card #: </label>
+    <input type="text" th:field="*{ccNumber}"/>
+    <span class="validationError"
+          th:if="${#fields.hasErrors('ccNumber')}"
+          th:errors="*{ccNumber}">CC Num Error</span>
 </form>
 </body>
 </html>

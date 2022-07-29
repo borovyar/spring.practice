@@ -18,6 +18,8 @@ import sia.tackodemo.domain.entity.Ingredient;
 import sia.tackodemo.domain.entity.Ingredient.Type;
 import sia.tackodemo.domain.entity.Taco;
 
+import javax.validation.Valid;
+
 @Slf4j
 @Controller
 @RequestMapping("/design")
@@ -49,7 +51,11 @@ public class DesignTacoController {
     }
 
     @PostMapping
-    public String processDesign(Design design){
+    public String processDesign(@Valid Taco design, Errors errors){
+
+        if(errors.hasErrors()) {
+            return "design";
+        }
 
         //business logic later
 
